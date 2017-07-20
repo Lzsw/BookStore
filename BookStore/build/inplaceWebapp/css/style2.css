@@ -1,0 +1,45 @@
+body{
+   background: url(../image/bg2.jpg)repeat;
+   padding:100px 0px 30px 0px;
+   font-family: 'Roboto', sans-serif;
+   font-size: 100%;
+}
+
+
+.para div {
+  font-size: 15px;
+  font-weight: 400;
+  color: #0080ff;
+}
+
+	.currencyBox {
+				background: none repeat scroll 0 0 transparent;
+				border: medium none;
+				color: #FFFFFF;
+				cursor: pointer;
+				float: none;
+				line-height: normal;
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+			.currencyBox a.mainCurrency {
+				display:none!important;
+			}
+			.currencyBox .currency_detial a {
+				background: none repeat scroll 0 0 #F9F9F9;
+				border: 1px solid #E6E6E6;
+				color: #FE6732;
+				float: left;
+				margin: 2px;
+				min-height: 14px;
+				padding: 10px 8px;
+			}
+			 .currencyBox .currency_detial a {
+				display: inline-block;
+				float: none;
+			}
+.col-md-4 img{
+	width:250px;
+	height:300px
+}			

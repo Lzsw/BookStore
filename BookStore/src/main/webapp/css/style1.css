@@ -1,0 +1,16 @@
+body{
+   background: url(../image/background.jpg)repeat;
+   padding:100px 0px 30px 0px;
+   font-family: 'Roboto', sans-serif;
+   font-size: 100%;
+}
+.col-md-4 p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+}
+.col-md-4 h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+}
