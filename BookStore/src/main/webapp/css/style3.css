@@ -2889,6 +2889,12 @@ h1.page-title {
 
 }
 
+.product-picture{
+	width: 45%;
+    float: left;
+     padding-left:88px;
+}
+
 .remain_cart ol{ display:block; clear:both; margin:0px;  }
 .remain_cart ol li{ display:block; clear:both; padding:10px 0px; }
 .remain_cart ol li + li{ border-top:1px solid #ddd; }

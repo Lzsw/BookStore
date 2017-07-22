@@ -2,14 +2,21 @@ package org.fkit.controller;
 
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.SimpleEmail;
 import org.fkit.domain.User;
 import org.fkit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -63,6 +70,62 @@ public class UserController {
 			//创建User对象
 		mv.setViewName("loginForm");
 		return mv;
+	}
+	
+	/**
+	 * 处理updatepassword请求
+	 * @param username
+	 * @param password
+	 * @param mv
+	 * @return
+	 */
+	@RequestMapping(value="/updatepassword")
+	 public String updatepsaaword(@RequestParam("username") String username,
+			HttpServletRequest request,
+			Model model,
+			@ModelAttribute User user){
+				userService.updatePassword(user);
+				return "loginForm";
+			}
+			//System.out.println(password);
+			// 设置客户端跳转到更新请求			
+			
+		// 返回
+
+	@RequestMapping(value="/find")
+	 public ModelAndView find(String loginname,String mail,ModelAndView mv,HttpSession session,HttpServletResponse response) throws Exception{		
+		User user=userService.findPasswordEmail(loginname, mail);	
+	if(user!=null){
+			StringBuffer url=new StringBuffer();
+			StringBuilder builder=new StringBuilder();
+			//邮件的正文
+			builder.append("");
+			url.append("您的密码是："+user.getPassword()+"");
+			builder.append("");
+			builder.append(""+url+"");
+			builder.append("");
+			SimpleEmail sendemail=new SimpleEmail();
+			sendemail.setHostName("smtp.163.com");
+			sendemail.setAuthentication("15505193156@163.com","wuxuke19980510");
+			sendemail.setCharset("UTF-8");
+			try{
+				sendemail.setCharset("UTF-8");
+				sendemail.addTo(mail);
+				sendemail.setFrom("15505193156@163.com");
+				sendemail.setSubject("找回密码");
+				sendemail.setMsg(builder.toString());
+				sendemail.send();
+			}catch(EmailException e){
+				e.printStackTrace();
+			}
+			
+			mv.setViewName("loginForm");
+		}else{		
+			
+			response.getWriter().println("密码获取失败！");
+		}
+		return mv;	
+		
 	}
 }
 

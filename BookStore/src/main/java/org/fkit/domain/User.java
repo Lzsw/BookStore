@@ -11,6 +11,7 @@ public class User implements Serializable{
 	private String username;	// 用户名
 	private String phone;		// 电话
 	private String address;		// 地址
+	private String mail;        //邮箱
 	
 	public User() {
 		super();
@@ -52,15 +53,21 @@ public class User implements Serializable{
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+	public String getMail() {
+		return mail;
+	}
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
 	
 	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", loginname=" + loginname + ", password="
 				+ password + ", username=" + username + ", phone=" + phone
-				+ ", address=" + address + "]";
+				+ ", address=" + address + ", mail=" + mail + "]";
 	}
+	
 }
 
 

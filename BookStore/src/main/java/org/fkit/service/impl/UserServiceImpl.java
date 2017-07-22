@@ -42,4 +42,22 @@ public class UserServiceImpl implements UserService {
 		userMapper.save(user);
 		// TODO Auto-generated method stub
 	}
+	
+	@Override
+	public void updatePassword(User user) {
+		userMapper.updatePassword(user);
+}
+
+	@Override
+	public User findPasswordEmail(String loginname, String mail) {
+		// TODO Auto-generated method stub
+		return userMapper.findPasswordEmail1(loginname, mail);
+	}
+
+	@Override
+	public User findPassword(String loginname) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

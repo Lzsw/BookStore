@@ -24,6 +24,7 @@
 				</div>
 				<p>
 					<a class="btn btn-primary btn-large" href="main">进入书屋</a>
+					<a class="btn btn-primary btn-large" href="changepwd">修改密码</a>
 	            </p>
 			</div>
 		</div>

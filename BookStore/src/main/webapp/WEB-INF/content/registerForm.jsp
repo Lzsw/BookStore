@@ -30,6 +30,7 @@
 	        <input type="text" id="username" name="username" value="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'username';}" >
 	        <input type="text" id="phone" name="phone" value="phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'phone';}" >
 	        <input type="text" id="address" name="address" value="address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'address';}" >
+	        <input type="text" id="mail" name="mail" value="mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mail';}" >
 	    </form>
 	    <div class="forgot">
 	    	<input type="submit" value="注册" >
