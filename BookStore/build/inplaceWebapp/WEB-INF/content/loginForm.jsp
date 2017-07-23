@@ -18,21 +18,21 @@
 <form action="login" method="post" >
 	<h2>Login Form</h2>
 	<div class="login-top">
-		<h1>LOGIN FORM</h1>
-		<form>
-			<input type="text" id="loginname" name="loginname" value="loginname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'loginname';}" >
-			<input type="password" id="password" name="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}" >
-	    </form>
+		<h2>loginname</h2>
+			<input type="text" id="loginname" name="loginname" >
+			<h2>password</h2>
+			<input type="password" id="password" name="password" >
 	    <div class="forgot">
-	    	<a href="forgetpwd">forgot Password</a>
-	    	<input type="submit" value="login" >
+	    	<a href="forgetpwd">forget Password</a>
+	    	<input type="submit"  value="登录" >
 	    </div>
 	    
-	<input type="checkbox"/> 记住密码 </label>
+	<input type="checkbox" id="remember" name="remember"/> 记住密码 
     </div>
 	<div class="login-bottom">
 		<h3><a href="registerForm">Register</a></h3>
 	</div>
+</form>
 </div>
 </body>
 </html>

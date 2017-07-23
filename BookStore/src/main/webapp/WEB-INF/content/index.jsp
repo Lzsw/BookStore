@@ -20,7 +20,7 @@
 					在这里，愿你找到一份宁静，一丝慰藉，一份温暖......
 				</div>
 				<div>
-				当前在线人数：<%out.println(application.getAttribute("count")); %>
+				当前在线人数：${applicationScope.count}
 				</div>
 				<p>
 					<a class="btn btn-primary btn-large" href="main">进入书屋</a>

@@ -1,14 +1,14 @@
 package org.fkit.mapper;
 
-import java.sql.Date;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.fkit.domain.Book;
-import org.fkit.domain.User;
 import org.fkit.mapperProvider.BookDynaSqlProvider;
 
 /**
@@ -58,8 +58,12 @@ public interface BookMapper {
     @Select("select * from book where id=#{id} ")
     Book  findWithId(@Param("id") Integer id);
     
+    @Select("select * from book where id=#{id}")
+    @Results({@Result(id = true,column="id",property="id"),@Result(column="id",property="id"),
+    @Result(column="name",property="name"),@Result(column="price",property="price"),
+    @Result(column="image",property="image"),@Result(column="count",property="count")})
+    List<Book> selectByBookId(int id);
     
-	
     //动态插入物品
     @SelectProvider(type=BookDynaSqlProvider.class,method="insertBook")
 	void save(Book bood);
@@ -69,5 +73,7 @@ public interface BookMapper {
     //动态查询物品
     @SelectProvider(method = "selectWhitParam", type = BookDynaSqlProvider.class)
     List<Book> selectById(Map<String, Object> params);
+    
+    
 	
 }

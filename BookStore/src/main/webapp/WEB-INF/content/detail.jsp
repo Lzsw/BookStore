@@ -71,12 +71,11 @@
 								<label for="qty">数量:</label>
 								<input type="text" value="1"  id="qty" class="input-text qty" name="qty">
 							</span>
-                            <form action="save" method="get" >
+                            
 	                            <div class="form-button">
-	                            <input type="hidden" name="book_id" value="${book.id}">
-								<input type="submit" value="加入购物车">
-								</div>
-							</form>
+	                            <p><a href="save?book_id=${book.id}"  role="button"> 加入购物车</a></p>
+                                </div>
+						
 							<ul class="add-to-box">
 								<li><a href="#" title="Add to Wishlist" class="add-wishlist">Add to Wishlist</a></li>
 							</ul>
