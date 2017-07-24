@@ -69,7 +69,7 @@
                                         </tr>
                                     </thead>
                 <c:forEach items="${requestScope.shop_list }" var="shop">
-                <c:forEach items="${shop.book }" var="book">
+               	 <c:forEach items="${shop.book }" var="book">
                                     <tbody>
                                         <tr class="cart_item">
                                             <td class="product-remove">
@@ -77,7 +77,7 @@
                                             </td>
 
                                             <td class="product-thumbnail">
-                                                <img  alt="poster_1_up" class="shop_thumbnail" src="image/${book.image}">
+                                                <img  alt="书籍" class="shop_thumbnail" src="image/${book.image}">
                                             </td>
 
                                             <td class="product-name">

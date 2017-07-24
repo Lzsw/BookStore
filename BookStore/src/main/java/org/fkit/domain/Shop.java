@@ -20,6 +20,7 @@ public class Shop implements Serializable {
 	private Integer count;//count
 	private String book_image;//book_image
 	private String book_price;
+	private String username;
 	
 	public Integer getId() {
 		return id;
@@ -65,10 +66,16 @@ public class Shop implements Serializable {
 		this.book_price = book_price;
 	}
 
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	
 	@Override
 	public String toString(){
-		return"Shop[id="+id+",book="+book+",book_id="+book_id+",book_name="+book_name+",count="+count+",book_image="+book_image+",book_price="+book_price+"]";
+		return"Shop[id="+id+",book="+book+",book_id="+book_id+",book_name="+book_name+",count="+count+",book_image="+book_image+",book_price="+book_price+",username="+username+"]";
 	}
 	
 }

@@ -35,9 +35,6 @@ List<Shop> findAll();
     //增加商品数量
     @Update("update shop set count=count+1 where book_id=#{book_id}")
 	void addShop(Shop shop);
-    //清空购物车
-    @Delete("delete from shop ")
-	void clearShop();
     //减少购物车商品数量
     @Update("update shop set count=count-1 where book_id=#{book_id}")
 	void reduceShop(Shop shop);

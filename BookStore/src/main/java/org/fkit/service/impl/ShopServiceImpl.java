@@ -76,11 +76,7 @@ public class ShopServiceImpl implements ShopService{
 				return shop;
 	}
 
-	@Override
-	public void clearShop() {
-		// TODO Auto-generated method stub
-		shopMapper.clearShop();
-	}
+	
 
 	@Override
 	public Shop removeShop(int book_id) {

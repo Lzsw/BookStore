@@ -15,7 +15,7 @@
 <link href='http://fonts.useso.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <body>
 <div class="login">
-<form action="login" method="post" >
+<form action="login" method="post" id="loginForm" >
 	<h2>Login Form</h2>
 	<div class="login-top">
 		<h2>loginname</h2>
@@ -34,5 +34,7 @@
 	</div>
 </form>
 </div>
+<script src="js/bootstrap.js"></script>
+<script src="js/rememberpwd.js"></script>
 </body>
 </html>

@@ -12,5 +12,5 @@ public interface ShopService {
 	Shop reduceShop(int book_id);
 	Shop increaseShop(int book_id);
 	Shop removeShop(int book_id);
-	void clearShop();
+	
 }

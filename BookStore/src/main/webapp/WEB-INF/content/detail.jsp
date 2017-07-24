@@ -74,11 +74,10 @@
                             
 	                            <div class="form-button">
 	                            <p><a href="save?book_id=${book.id}"  role="button"> 加入购物车</a></p>
+	                            <p><a href="collection?book_id=${book.id}"  role="button"> 加入收藏夹</a></p>
                                 </div>
 						
-							<ul class="add-to-box">
-								<li><a href="#" title="Add to Wishlist" class="add-wishlist">Add to Wishlist</a></li>
-							</ul>
+							
 						</div>
 					</div>
 				</div>

@@ -37,7 +37,7 @@ public class BookServiceImpl implements BookService {
 	}
 	
 	/**
-	 * BookService接口getAllqinggan哦方法实现
+	 * BookService接口getAllqinggan方法实现
 	 * @see { BookService }
 	 * */
 	@Transactional(readOnly=true)

@@ -66,7 +66,7 @@ public interface BookMapper {
     
     //动态插入物品
     @SelectProvider(type=BookDynaSqlProvider.class,method="insertBook")
-	void save(Book bood);
+	void save(Book book);
     //动态修改物品
     @SelectProvider(type=BookDynaSqlProvider.class,method="updateBook")
 	void update(Book book);
