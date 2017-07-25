@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/elastislide.css"/>
 <link rel="stylesheet" href="css/home_flexslider.css"/>
 <link rel="stylesheet" href="css/light_box.css"/>
-<link href="css/style2.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style2.css" >
 </head>
 <body>
 <div class="mainContainer sixteen container">
@@ -74,7 +74,7 @@
                             
 	                            <div class="form-button">
 	                            <p><a href="save?book_id=${book.id}"  role="button"> 加入购物车</a></p>
-	                            <p><a href="collection?book_id=${book.id}"  role="button"> 加入收藏夹</a></p>
+	                            <p><a href="saveCollect?book_id=${book.id}&loginname=${user.loginname}&image=${book.image}&name=${book.name}&price=${book.price}"  role="button"> 加入收藏夹</a></p>
                                 </div>
 						
 							

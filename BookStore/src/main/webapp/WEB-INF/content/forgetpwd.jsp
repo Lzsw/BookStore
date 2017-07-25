@@ -29,6 +29,7 @@
     </div>
 	<div class="login-bottom">
 	</div>
+</form>
 </div>
 </body>
 </html>

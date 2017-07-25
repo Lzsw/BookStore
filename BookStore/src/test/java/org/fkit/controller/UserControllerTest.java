@@ -14,6 +14,7 @@ public class UserControllerTest extends junittest{
 	@Autowired
 	@Qualifier("userService")
 	private UserService userService;
+	
 	@Test
 	public void testLogin() {
 		User user = userService.login("Jack", "123456");

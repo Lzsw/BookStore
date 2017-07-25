@@ -1,65 +1,69 @@
 package org.fkit.domain;
 
-import java.io.Serializable;
-import java.util.List;
+public class Collect{
 
-public class Collect implements Serializable {
-    public List<Book> getBook(){
-    	return book;
-    }
-    public void setBook(List<Book> book){
-    	this.book=book;
-    }
+	/**
+	 * 
+	 */
 	
 	private int id;
-	private List<Book> book;
-	private Integer book_id;
-	private String book_name;
-	private String book_price;
-	private String book_image;
-	private String username;
+	private String name;
+	private Double price;
+	private String image;
+	private String loginname;
+	private int user_id;
+	private int book_id;
+
+	
 	
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getBook_mage() {
-		return book_image;
+	public String getName() {
+		return name;
 	}
-	public void setImage(String book_image) {
-		this.book_image = book_image;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getBook_price() {
-		return book_price;
+	public Double getPrice() {
+		return price;
 	}
-	
-	public void setPrice(String book_price) {
-		this.book_price = book_price;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
-	
-	public Integer getBook_id() {
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public String getLoginname() {
+		return loginname;
+	}
+	public void setLoginname(String loginname) {
+		this.loginname = loginname;
+	}
+	public int getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+	public int getBook_id() {
 		return book_id;
 	}
-	public void setBook_id(Integer book_id) {
+
+	public void setBook_id(int book_id) {
 		this.book_id = book_id;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getBook_name() {
-		return book_name;
-	}
-	public void setBook_ame(String book_name) {
-		this.book_name = book_name;
 	}
 	@Override
 	public String toString() {
-		return "Collect [id=" + id + ", book_id=" + book_id + ",username=" + username + ",book_name=" + book_name + ",book_price="
-				+ book_price + ", book_image=" + book_image + "]";
+		return "Shop [id=" + id + ",name=" + name + ", price=" + price + ", image=" + image + ",loginname=" + loginname + ",user_id=" + user_id + ",book_id=" + book_id + "]";
 	}
+
 }

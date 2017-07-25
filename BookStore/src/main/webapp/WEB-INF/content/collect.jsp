@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>购物车</title>
+<title>收藏</title>
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style5.css">
@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Shopping Cart</h2>
+                        <h2>Collection</h2>
                     </div>
                 </div>
             </div>
@@ -65,46 +65,37 @@
                                             <th class="product-thumbnail">&nbsp;</th>
                                             <th class="product-name">Book</th>
                                             <th class="product-price">Price</th>
-                                            <th class="product-quantity">Count</th>
+                                            <th class="product-name">Loginname</th>
                                         </tr>
                                     </thead>
-                <c:forEach items="${requestScope.shop_list }" var="shop">
-               	 <c:forEach items="${shop.book }" var="book">
-                                    <tbody>
+                <c:forEach items="${collect_list}" var="collect">
+               	                                    <tbody>
                                         <tr class="cart_item">
                                             <td class="product-remove">
-                                                <a title="Remove this item" class="remove"  href="remove?book_id=${book.id}">×</a> 
+                                                <a title="Remove this item" class="remove"  href="removeCollect?book_id=${collect.book_id}&loginname=${sessionScope.user.loginname}">×</a> 
                                             </td>
 
                                             <td class="product-thumbnail">
-                                                <img  alt="书籍" class="shop_thumbnail" src="image/${book.image}">
+                                                <img  alt="书籍" class="shop_thumbnail" src="image/${collect.image}">
                                             </td>
 
                                             <td class="product-name">
-                                                ${book.name}
+                                                ${collect.name}
                                             </td>
 
                                             <td class="product-price">
-                                                ${book.price}
+                                                ${collect.price}
+                                            </td>
+                                            
+                                             <td class="product-name">
+                                                ${collect.loginname}
                                             </td>
 
-                                            <td class="product-quantity">
-                                                <div class="quantity buttons_added">
-                                                    <a  href="reduce?book_id=${book.id}" class="minus" >-</a>
-                                                    ${shop.count}
-                                                    <a  href="increase?book_id=${book.id}"  class="plus" >+</a>
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
                                        
                                     </tbody>
                             </c:forEach>
-                       </c:forEach>	
-                        <tr>
-                                            <td class="actions" colspan="6">
-                                                <input type="submit" value="立即购买" name="proceed" class="checkout-button button alt wc-forward">
-                                            </td>
-                                        </tr>
                                 </table>
                             </form>
                      </div>
@@ -114,4 +105,3 @@
     </div> 
 </body>
 
-</html>

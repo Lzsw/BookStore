@@ -32,7 +32,7 @@
                         <li ><a href="encouragement">励志类</a></li>
                         <li><a href="reasoning">推理类</a></li>
                         <li><a href="novel">长篇小说类</a></li>
-                        <li><a href="#">收藏夹</a></li>
+                        <li><a href="collect">收藏夹</a></li>
                         <li><a href="cart">购物车</a></li>
                     </ul>
                 </div>  

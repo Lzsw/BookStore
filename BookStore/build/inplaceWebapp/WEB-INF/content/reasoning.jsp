@@ -46,8 +46,6 @@
 	</c:forEach> 
   </div> 
 </div>
-<script src="js/jquery1.min.js"></script>
 <script src="js/bootstrap1.min.js"></script>
-<script src="js/scripts1.js"></script>
 </body>
 </html>
