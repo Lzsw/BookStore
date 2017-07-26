@@ -51,5 +51,19 @@ public interface BookService {
 	 * @param Book 用户对象
 	 * */
 	void addBook(Book book);
+	
+	/**
+	 * 根据id删除商品
+	 * @param id 
+	 * */
+	public void removeBookById(Integer id);
+	
+	/**
+	 * 修改商品
+	 * @param Book 用户对象
+	 * */
+	void modifyBook(Book book);
+	
+	
 
 }

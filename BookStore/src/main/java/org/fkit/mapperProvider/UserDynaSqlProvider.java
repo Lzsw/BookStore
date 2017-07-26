@@ -27,6 +27,9 @@ public class UserDynaSqlProvider {
 				if(user.getAddress()!=null && !user.getAddress().equals("")){
 					VALUES("address","#{address}");
 				}
+				if(user.getMail()!=null && !user.getMail().equals("")){
+					VALUES("mail","#{mail}");
+				}
 			}
 		}.toString();
 	}
@@ -51,6 +54,9 @@ public class UserDynaSqlProvider {
 					}
 					if(user.getAddress()!=null){
 						SET("address=#{address}");
+					}
+					if(user.getMail()!=null){
+						SET("mail=#{mail}");
 					}
 					WHERE("id=#{id}");
 				}

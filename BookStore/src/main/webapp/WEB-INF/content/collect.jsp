@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </div> 
     
      <div class="container">
@@ -65,7 +65,6 @@
                                             <th class="product-thumbnail">&nbsp;</th>
                                             <th class="product-name">Book</th>
                                             <th class="product-price">Price</th>
-                                            <th class="product-name">Loginname</th>
                                         </tr>
                                     </thead>
                 <c:forEach items="${collect_list}" var="collect">
@@ -86,12 +85,6 @@
                                             <td class="product-price">
                                                 ${collect.price}
                                             </td>
-                                            
-                                             <td class="product-name">
-                                                ${collect.loginname}
-                                            </td>
-
-                                            
                                         </tr>
                                        
                                     </tbody>

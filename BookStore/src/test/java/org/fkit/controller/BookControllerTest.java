@@ -1,13 +1,16 @@
 package org.fkit.controller;
 
-import static org.junit.Assert.*;
+import java.util.List;
 
+import org.fkit.domain.Book;
 import org.fkit.service.BookService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-public class BookControllerTest {
+import junittest.junittest;
+
+public class BookControllerTest extends junittest{
 	
 	/**
 	 * 自动注入BookService
@@ -18,32 +21,31 @@ public class BookControllerTest {
 	
 	@Test
 	public void testMain() {
-		fail("Not yet implemented");
+		List<Book> book_list = bookService.getAll();
+		System.out.println(book_list);
 	}
 
 	@Test
 	public void testQinggan() {
-		fail("Not yet implemented");
+		List<Book> book_list = bookService.getAllqinggan();
+		System.out.println(book_list);
 	}
 
 	@Test
 	public void testLizhi() {
-		fail("Not yet implemented");
+		List<Book> book_list = bookService.getAllencouragement();
+		System.out.println(book_list);
 	}
 
 	@Test
 	public void testTuili() {
-		fail("Not yet implemented");
+		List<Book> book_list = bookService.getAllreasoning();
+		System.out.println(book_list);
 	}
 
 	@Test
 	public void testChangpian() {
-		fail("Not yet implemented");
+		List<Book> book_list = bookService.getAllnovel();
+		System.out.println(book_list);
 	}
-
-	@Test
-	public void testDetail() {
-		fail("Not yet implemented");
-	}
-
 }

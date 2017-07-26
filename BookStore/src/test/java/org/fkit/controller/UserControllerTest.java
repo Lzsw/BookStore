@@ -1,7 +1,5 @@
 package org.fkit.controller;
 
-import static org.junit.Assert.*;
-
 import org.fkit.domain.User;
 import org.fkit.service.UserService;
 import org.junit.Test;
@@ -23,21 +21,4 @@ public class UserControllerTest extends junittest{
 	}else{
 		System.out.println("登陆失败");}
 	}
-	
-
-	@Test
-	public void testAddUser() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUpdatepsaaword() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testFind() {
-		fail("Not yet implemented");
-	}
-
 }

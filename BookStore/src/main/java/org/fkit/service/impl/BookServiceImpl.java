@@ -98,4 +98,26 @@ public class BookServiceImpl implements BookService {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	/**
+	 *BookServiceImpl接口removeBookById方法实现
+	 * @see { BookService }
+	 * */
+	@Override
+	public void removeBookById(Integer id) {
+		bookMapper.deleteById(id);
+		// TODO Auto-generated method stub
+		
+	}
+	
+	/**
+	 *BookServiceImpl接口modifyBook方法实现
+	 * @see { BookService }
+	 * */
+	@Override
+	public void modifyBook(Book book) {
+		bookMapper.update(book);
+		// TODO Auto-generated method stub
+		
+	}
 }

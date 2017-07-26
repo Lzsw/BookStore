@@ -75,14 +75,15 @@
 	                            <div class="form-button">
 	                            <p><a href="save?book_id=${book.id}"  role="button"> 加入购物车</a></p>
 	                            <p><a href="saveCollect?book_id=${book.id}&loginname=${user.loginname}&image=${book.image}&name=${book.name}&price=${book.price}"  role="button"> 加入收藏夹</a></p>
-                                </div>
-						
-							
+                                </div>	
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
     </session>
+ 
 			<section class="product-collateral">
             	
 				<ul class="tab-block">
@@ -92,6 +93,9 @@
 				<div id="pro-detail" class="pro-detail commonContent">
 					
 					<p>${book.remark}</p>
+				</div>
+			</section>
+</div>
 <script src="js/jquery-1.8.3.min.js" type="text/JavaScript"></script>
 <script src="js/jquery-1.8.2.min.js"></script>
 <script src="js/common.js"></script>

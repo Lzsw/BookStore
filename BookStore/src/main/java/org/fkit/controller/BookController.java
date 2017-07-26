@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -100,5 +102,56 @@ public class BookController {
 		mv.setViewName("detail");
 		return mv;
 		
+	}
+	
+	/**
+	 * 处理添加请求
+	 * @param Book book 要添加书本的对象
+	 * @param ModelAndView mv
+	 **/
+	@RequestMapping(value = "/addBook")
+	public ModelAndView addBook(
+			@ModelAttribute Book book,MultipartFile image1,MultipartFile picture1,
+			ModelAndView mv) throws Exception{
+		String image=image1.getOriginalFilename();
+		String picture=picture1.getOriginalFilename();
+		book.setImage(image);
+		book.setPicture(picture);
+		bookService.addBook(book);
+		mv.setViewName("addbook");
+		return mv;
+	}
+	
+	/**
+	 * 处理删除请求
+	 * @param String ids 需要删除书本的id字符串
+	 * @param ModelAndView mv
+	 **/
+	@RequestMapping(value = "/removeBook")
+	public ModelAndView removeBook(String ids,ModelAndView mv){
+		//分解id字符串
+		String[] idArray=ids.split(",");
+		for(String id:idArray){
+			//根据id删除书本
+			bookService.removeBookById(Integer.parseInt(id));
+		}
+		//设置客户端跳转到removebook请求
+		mv.setViewName("removebook");
+		//返回ModelAndView
+		return mv;
+	}
+	
+	/**
+	 * 处理修改请求
+	 * @param Book book 要修改书本的对象
+	 * @param ModelAndView mv
+	 **/
+	@RequestMapping(value = "/updateBook")
+	public ModelAndView updateBook(
+			@ModelAttribute Book book,
+			ModelAndView mv){
+				bookService.modifyBook(book);
+		mv.setViewName("updatebook");
+		return mv;
 	}
 }

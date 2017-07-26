@@ -11,7 +11,6 @@ public class Collect{
 	private Double price;
 	private String image;
 	private String loginname;
-	private int user_id;
 	private int book_id;
 
 	
@@ -47,13 +46,6 @@ public class Collect{
 	public void setLoginname(String loginname) {
 		this.loginname = loginname;
 	}
-	public int getUser_id() {
-		return user_id;
-	}
-
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
-	}
 	public int getBook_id() {
 		return book_id;
 	}
@@ -63,7 +55,7 @@ public class Collect{
 	}
 	@Override
 	public String toString() {
-		return "Shop [id=" + id + ",name=" + name + ", price=" + price + ", image=" + image + ",loginname=" + loginname + ",user_id=" + user_id + ",book_id=" + book_id + "]";
+		return "Collect [id=" + id + ",name=" + name + ", price=" + price + ", image=" + image + ",loginname=" + loginname + ",book_id=" + book_id + "]";
 	}
 
 }

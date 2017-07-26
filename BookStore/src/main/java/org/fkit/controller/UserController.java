@@ -66,7 +66,7 @@ public class UserController {
 	public ModelAndView addUser(
 			@ModelAttribute User user,
 			ModelAndView mv){
-				userService.addUser(user);
+		userService.addUser(user);
 			//创建User对象
 		mv.setViewName("loginForm");
 		return mv;
@@ -84,8 +84,8 @@ public class UserController {
 			HttpServletRequest request,
 			Model model,
 			@ModelAttribute User user){
-				userService.updatePassword(user);
-				return "loginForm";
+			userService.updatePassword(user);
+			return "loginForm";
 			}
 			//System.out.println(password);
 			// 设置客户端跳转到更新请求			

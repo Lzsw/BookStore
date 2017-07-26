@@ -1,8 +1,8 @@
 package org.fkit.mapper;
 
 import java.util.List;
-import java.util.Map;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
@@ -70,9 +70,9 @@ public interface BookMapper {
     //动态修改物品
     @SelectProvider(type=BookDynaSqlProvider.class,method="updateBook")
 	void update(Book book);
-    //动态查询物品
-    @SelectProvider(method = "selectWhitParam", type = BookDynaSqlProvider.class)
-    List<Book> selectById(Map<String, Object> params);
+    //根据id删除书本
+    @Delete("delete from book where id=#{id}")
+    void deleteById(Integer id);
     
     
 	

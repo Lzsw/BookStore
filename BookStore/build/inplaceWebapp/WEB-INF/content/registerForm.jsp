@@ -36,6 +36,7 @@
 	    	<input type="submit" value="注册" >
 	    </div>
 	</div>
+</form>
 </div>	
 </body>
 </html>
