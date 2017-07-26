@@ -3,6 +3,7 @@ package org.fkit.service;
 import java.util.List;
 
 import org.fkit.domain.Book;
+import org.fkit.domain.Shop;
 
 /**
  * Book服务层接口
@@ -56,7 +57,7 @@ public interface BookService {
 	 * 根据id删除商品
 	 * @param id 
 	 * */
-	public void removeBookById(Integer id);
+	Book removeBook(int id);;
 	
 	/**
 	 * 修改商品

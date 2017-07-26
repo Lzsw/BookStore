@@ -42,18 +42,14 @@
 					<div class="product-shop">
 						<h3 class="product-name">${book.name}</h3>
 						<div class="price-box">
-						<br>
+						
 						<span class="price">作者：${book.author}</span>
-						</br>
 						<br>
 						<span class="price">价格：${book.price}</span>
-						</br>
 						<br>
                 		<span class="price">出版社：${book.publication}</span>
-                		</br>
                 		<br>
-						<span class="price">出版时间：${book.publicationdate}</span>
-						</br>
+						
 						</div>
 						<div class="model-block">
 							<p>

@@ -72,7 +72,7 @@ public interface BookMapper {
 	void update(Book book);
     //根据id删除书本
     @Delete("delete from book where id=#{id}")
-    void deleteById(Integer id);
+    void removeBook(Book book);
     
     
 	

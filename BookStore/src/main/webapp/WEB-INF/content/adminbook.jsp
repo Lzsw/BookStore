@@ -9,7 +9,7 @@
 <link href="css/adminloginstyle.css" rel="stylesheet" type="text/css" media="all"/>
 <body>
 <div class="geshi">
-<form action="addBook" enctype="multipart/form-data" method="post">
+<form action="addBook" method="post" enctype="multipart/form-data">
 	
 	<br>
 	<br>
@@ -28,23 +28,21 @@
 	<a>出版社</a><input type="text" name="publication"  >
 	<br>
 	<br>
-	<a>出版日期</a><input type="date" name="publicationdate" >
-	<br>
-	<br>
 	<a>书本编号</a><input type="text" name="book_sn"  >
 	<br>
 	<br>
 	<a>种类编号</a><input type="text" name="category_sn"  >
 	<br>
 	<br>
-	<a>主图</a><input type="file" name="image1" >
+	<a>主图</a><input type="file" name="image1"  >
 	<br>
 	<br>
-	<a>附图</a><input type="file" name="picture1"  >
+	<a>副图</a><input type="file" name="picture1"  >
 	<br>
 	<br>
 	
-	<input type="submit"  value="添加" id="addBook_button">
+	
+	<input type="submit"  value="添加" >
 </form>
 </div>
 </body>

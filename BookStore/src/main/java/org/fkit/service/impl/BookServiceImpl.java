@@ -3,6 +3,7 @@ package org.fkit.service.impl;
 import java.util.List;
 
 import org.fkit.domain.Book;
+import org.fkit.domain.Shop;
 import org.fkit.mapper.BookMapper;
 import org.fkit.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -104,12 +105,13 @@ public class BookServiceImpl implements BookService {
 	 * @see { BookService }
 	 * */
 	@Override
-	public void removeBookById(Integer id) {
-		bookMapper.deleteById(id);
+	public Book removeBook(int id) {
 		// TODO Auto-generated method stub
-		
+		Book book = bookMapper.findWithId(id);
+		bookMapper.removeBook(book);
+		return book;
 	}
-	
+
 	/**
 	 *BookServiceImpl接口modifyBook方法实现
 	 * @see { BookService }

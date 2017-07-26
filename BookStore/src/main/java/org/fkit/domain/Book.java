@@ -21,7 +21,6 @@ public class Book implements Serializable{
 	private String name;			// 书名
 	private String author;			// 作者
 	private String publication;		// 出版社
-	private Date publicationdate;	// 出版日期
 	private Double price;			// 价格
 	private String image;			// 封面图片
 	private String remark;			// 详细描述
@@ -57,12 +56,6 @@ public class Book implements Serializable{
 	}
 	public void setPublication(String publication) {
 		this.publication = publication;
-	}
-	public Date getPublicationdate() {
-		return publicationdate;
-	}
-	public void setPublicationdate(Date publicationdate) {
-		this.publicationdate = publicationdate;
 	}
 	public Double getPrice() {
 		return price;
@@ -103,8 +96,7 @@ public class Book implements Serializable{
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", name=" + name + ", author=" + author
-				+ ", publication=" + publication + ", publicationdate="
-				+ publicationdate + ", price=" + price + ", image=" + image
+				+ ", publication=" + publication + ",  price=" + price + ", image=" + image
 				+ ", remark=" + remark + ",category_sn=" + category_sn+ ",picture=" + picture+ "]";
 	}
 	

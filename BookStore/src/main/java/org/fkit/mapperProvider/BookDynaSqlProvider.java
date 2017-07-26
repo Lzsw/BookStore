@@ -22,9 +22,6 @@ public class BookDynaSqlProvider {
 							if(book.getPublication() != null && !book.getPublication().equals("")){
 								VALUES("publication", "#{publication}");
 							}
-							if(book.getPublicationdate() != null && !book.getPublicationdate().equals("")){
-								VALUES("publicationdate", "#{publicationdate}");
-							}
 							if(book.getRemark() != null && !book.getRemark().equals("")){
 								VALUES("remark", "#{remark}");
 							}
@@ -60,9 +57,6 @@ public class BookDynaSqlProvider {
 								}
 								if(book.getPublication() != null){
 									SET(" publication = #{publication} ");
-								}
-								if(book.getPublicationdate() != null){
-									SET(" publicationdate = #{publicationdate} ");
 								}
 								if(book.getRemark() != null){
 									SET("remark = #{remark} ");

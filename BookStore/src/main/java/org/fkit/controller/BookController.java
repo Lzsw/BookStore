@@ -2,7 +2,11 @@ package org.fkit.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.fkit.domain.Book;
+import org.fkit.domain.Collect;
+import org.fkit.domain.Shop;
 import org.fkit.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -122,24 +126,24 @@ public class BookController {
 		return mv;
 	}
 	
+	
 	/**
 	 * 处理删除请求
 	 * @param String ids 需要删除书本的id字符串
 	 * @param ModelAndView mv
 	 **/
-	@RequestMapping(value = "/removeBook")
-	public ModelAndView removeBook(String ids,ModelAndView mv){
-		//分解id字符串
-		String[] idArray=ids.split(",");
-		for(String id:idArray){
-			//根据id删除书本
-			bookService.removeBookById(Integer.parseInt(id));
-		}
-		//设置客户端跳转到removebook请求
-		mv.setViewName("removebook");
-		//返回ModelAndView
-		return mv;
+	@RequestMapping(value="/removeBook")
+	public String removeBook(Model model,HttpServletRequest request){
+		String id = request.getParameter("id");
+		int id_ = Integer.parseInt(id);
+		bookService.removeBook(id_);
+		List<Book> book_list = bookService.getAll();
+		// 将图书集合添加到model当中
+		model.addAttribute("book_list", book_list);
+		// 跳转到cart页面
+		return "deletebook";
 	}
+	
 	
 	/**
 	 * 处理修改请求
@@ -153,5 +157,17 @@ public class BookController {
 				bookService.modifyBook(book);
 		mv.setViewName("updatebook");
 		return mv;
+	}
+	/**
+	 * 处理/deletebook请求
+	 * */
+	@RequestMapping(value="/deletebook")
+	 public String deletebook(Model model){
+		// 获得所有图书集合
+		List<Book> book_list = bookService.getAll();
+		// 将图书集合添加到model当中
+		model.addAttribute("book_list", book_list);
+		// 跳转到main页面
+		return "deletebook";
 	}
 }
