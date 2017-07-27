@@ -22,7 +22,7 @@
 		<img src="image/${book.image }" />
 			<div class="para">
 				<div class="para"><font><font>
-					书名：<a href="detail?id= ${book.id }">${book.name}</a>
+					书名：<a href="bookdetail?id= ${book.id }">${book.name}</a>
 				</font></font></div>	
 			<div class="para">
 				<div class="para"><font><font>

@@ -26,7 +26,7 @@ public class Book implements Serializable{
 	private String remark;			// 详细描述
 	private String category_sn;		// 分类编号
 	private String book_sn;			// 书籍编号
-	private String picture;			// 小图
+	private String picture;			// 附图
 	
 	
 	public Book() {
@@ -93,14 +93,11 @@ public class Book implements Serializable{
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
+	
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", name=" + name + ", author=" + author
 				+ ", publication=" + publication + ",  price=" + price + ", image=" + image
 				+ ", remark=" + remark + ",category_sn=" + category_sn+ ",picture=" + picture+ "]";
 	}
-	
-	
-	
-
 }

@@ -3,6 +3,7 @@ encoding//src/main/webapp/WEB-INF=UTF-8
 encoding//src/main/webapp/WEB-INF/content/addbook.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/content/adminbook.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/content/adminloginForm.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/content/bookdetail.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/content/cart.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/content/changepwd.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/content/collect.jsp=UTF-8

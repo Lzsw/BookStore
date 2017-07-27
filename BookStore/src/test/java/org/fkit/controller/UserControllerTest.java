@@ -21,4 +21,5 @@ public class UserControllerTest extends junittest{
 	}else{
 		System.out.println("登陆失败");}
 	}
+
 }

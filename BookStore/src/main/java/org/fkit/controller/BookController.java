@@ -99,11 +99,11 @@ public class BookController {
 	/**
 	 * 处理/detail/{id}
 	 */
-	@RequestMapping(value="/detail")
+	@RequestMapping(value="/bookdetail")
 	public ModelAndView detail(@RequestParam("id") Integer id, Model model,ModelAndView mv){
 		Book book = bookService.getBookDetail(id);
 		mv.addObject("book",book);
-		mv.setViewName("detail");
+		mv.setViewName("bookdetail");
 		return mv;
 		
 	}
